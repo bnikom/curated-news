@@ -1,0 +1,27 @@
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+  background-color: #F0FFFE;
+  color: #390213;
+}
+
+ul {
+  display: table;
+
+  li {
+    display: table-cell;
+  }
+}
+
+.article-img {
+  max-height: 15vw;
+}
+
+
+ul li {
+  width: 20%
+}
+
+.content-info {
+
+}
