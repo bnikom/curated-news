@@ -31,9 +31,9 @@ class Business extends Component {
     console.log(articles)
 
     return(
-      <div className="mt-4">
+      <div>
         <NavBar />
-        <div>
+        <div className="mt-4">
           <h1>Top Business News</h1>
           <ArticleBody 
             articles={articles}

@@ -14,18 +14,26 @@ class Entertainment extends Component {
   }
 
   async componentDidMount() {
-    console.log('HHIHIHIH')
+    
   }
 
   render() {
     const { loading } = this.state;
+    const { url, author, title } = this.props.location.state;
 
-    if (loading) return null;
+    console.log(this.props.location)
+
+    if (!loading) return null;
+
+    console.log(url)
 
     return(
       <div>
         <NavBar />
         <div className="mt-4">
+          <h1>{title}</h1>
+          <h2>By {author}</h2>
+          <iframe title={title} src={url}></iframe>
         </div>
       </div>
     );

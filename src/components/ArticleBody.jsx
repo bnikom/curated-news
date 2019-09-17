@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const ArticleBody = ({ articles, colSize }) => {
 
@@ -19,18 +20,21 @@ const ArticleBody = ({ articles, colSize }) => {
           } = article;
 
           const articleLink = `/curated/article/${name}-${publishedAt}`;
-          console.log(articleLink)
           return(
-            <Col xs={colSize} className="">
+            <Col xs={colSize} key={url} className="article-square">
               <div>
-                <a href={articleLink}>
+                <Link
+                  to={{
+                    pathname: articleLink,
+                    state: { url, author, title }
+                }}>
                   <img
                     className="article-img mb-2 p-2"
                     key={name}
                     src={(urlToImage) ? urlToImage : '/images/no-image.png' }
                     alt={(urlToImage )? title : "No Image Available"}
                   />
-                </a>
+                </Link>
               </div>
               <div className="content-info">
                 <a href={articleLink}>{title}</a>

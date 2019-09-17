@@ -27,12 +27,9 @@ export default class NavBar extends Component {
   render () {
     return(
       <Nav>
-        <NavItem>
+        <NavLink className="brown-color" href="/curated/home">
           <h3>Curated News</h3>
-        </NavItem>
-        <NavItem>
-          <NavLink href="/curated/home">HomePage</NavLink>
-        </NavItem>
+        </NavLink>
           <Dropdown nav onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav>
               Articles
