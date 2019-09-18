@@ -21,8 +21,6 @@ class Article extends Component {
     const { loading } = this.state;
     const { url, author, title } = this.props.location.state;
 
-    if (!loading) return null;
-
     return(
       <div>
         <NavBar />
