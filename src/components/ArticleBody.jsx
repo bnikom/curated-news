@@ -20,6 +20,7 @@ const ArticleBody = ({ articles, colSize }) => {
           } = article;
 
           const articleLink = `/curated/article/${name}-${publishedAt}`;
+
           return(
             <Col xs={colSize} key={url} className="article-square">
               <div>

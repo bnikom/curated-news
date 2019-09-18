@@ -5,7 +5,7 @@ import { Col, Row } from 'reactstrap';
 
 import NavBar from '../Navbar/Navbar'
 
-class Entertainment extends Component {
+class Article extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,11 +21,7 @@ class Entertainment extends Component {
     const { loading } = this.state;
     const { url, author, title } = this.props.location.state;
 
-    console.log(this.props.location)
-
     if (!loading) return null;
-
-    console.log(url)
 
     return(
       <div>
@@ -41,4 +37,4 @@ class Entertainment extends Component {
 
 }
 
-export default Entertainment;
+export default Article;

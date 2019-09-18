@@ -16,9 +16,7 @@ class HomePage extends Component {
   }
 
   async componentDidMount() {
-    console.log('HHIHIHIH')
     const response = await axios.get('https://newsapi.org/v2/everything?pageSize=15&domains=wsj.com,nytimes.com, wapo.com&apiKey=703c21d15eb941f7bac49340b26f4aa1');
-    console.log(response.data)
     this.setState({ articles: response.data.articles, loading: false })
   }
 
@@ -28,8 +26,7 @@ class HomePage extends Component {
     if (loading) return null;
 
     const { articles } = this.state;
-    console.log(articles)
-
+  
     return(
       <div>
         <NavBar />

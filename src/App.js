@@ -6,10 +6,8 @@ import { Route, Switch } from 'react-router';
 
 import HomePage from './components/Homepage/Homepage';
 import NotFound from './components/NotFound/NotFound';
-import Technology from './components/Technology/Technology';
-import Business from './components/Business/Business';
-import Entertainment from './components/Entertainment/Entertainment';
 import Article from './components/Article/Article';
+import NewsType from './components/NewsType';
 
 class App extends Component {
   render() {
@@ -25,17 +23,17 @@ class App extends Component {
               <Route 
                 exact
                 path="/curated/tech"
-                component={Technology}
+                render={(props) => <NewsType {...props} type="technology" />}
               />
               <Route 
                 exact
                 path="/curated/business"
-                component={Business}
+                render={(props) => <NewsType {...props} type="business" />}
               />
               <Route 
                 exact
                 path="/curated/entertainment"
-                component={Entertainment}
+                render={(props) => <NewsType {...props} type="entertainment" />}
               />
               <Route 
                 path="/curated/article/:id"
